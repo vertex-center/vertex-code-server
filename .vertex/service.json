@@ -1,0 +1,18 @@
+{
+    "id": "vertex-code-server",
+    "name": "Vertex Code Server",
+    "repository": "github.com/vertex-center/vertex-code-server",
+    "description": "A code-server wrapper for Vertex.",
+    "environment": [
+        {
+            "type": "port",
+            "name": "PORT",
+            "display_name": "Port",
+            "default": "8080",
+            "description": "The port to expose code-server."
+        }
+    ],
+    "dependencies": {
+        "code-server": true
+    }
+}
