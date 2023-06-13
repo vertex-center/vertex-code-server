@@ -12,7 +12,29 @@
             "description": "The port to expose code-server."
         }
     ],
-    "dependencies": {
-        "code-server": true
+    "urls": [
+        {
+            "name": "Code Server",
+            "port": "8080",
+            "ping": "/",
+            "kind": "client"
+        }
+    ],
+    "methods": {
+        "script": {
+            "file": "start.sh",
+            "dependencies": {
+                "code-server": true
+            }
+        },
+        "docker": {
+            "image": "linuxserver/code-server",
+            "ports": {
+                "8443": "8080"
+            },
+            "volumes": {
+                "data": "/config"
+            }
+        }
     }
 }
